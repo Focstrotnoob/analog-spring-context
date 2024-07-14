@@ -1,8 +1,11 @@
 package ilinykh.ru.context;
 
 
+import ilinykh.ru.factory.DependencyFactory;
 import ilinykh.ru.factory.DependencyFactoryImp;
+import ilinykh.ru.service.InjectionService;
 import ilinykh.ru.service.InjectionServiceImpl;
+import ilinykh.ru.service.SearchService;
 import ilinykh.ru.service.SearchServiceImpl;
 import java.util.HashMap;
 import java.util.Map;
@@ -10,9 +13,9 @@ import java.util.Set;
 
 public class IntensiveContext {
     private final String basePackage;
-    private final SearchServiceImpl searchService;
-    private final InjectionServiceImpl injectionService;
-    private final DependencyFactoryImp dependencyFactory;
+    private final SearchService searchService;
+    private final InjectionService injectionService;
+    private final DependencyFactory dependencyFactory;
     private final Map<Class<?>, Object> components = new HashMap<>();
     private final Map<Class<?>, Class<?>> interfaceImplementations = new HashMap<>();
 
