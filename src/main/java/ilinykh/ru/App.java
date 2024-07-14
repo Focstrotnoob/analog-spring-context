@@ -1,13 +1,13 @@
 package ilinykh.ru;
 
-/**
- * Hello world!
- *
- */
+import ilinykh.ru.context.IntensiveContext;
+
 public class App 
 {
-    public static void main( String[] args )
-    {
-        System.out.println( "Hello World!" );
+    public static void main( String[] args ) throws Exception {
+
+        IntensiveContext intensiveContext = new IntensiveContext("ilinykh.ru");
+        SomeClass someClass = intensiveContext.getObject(SomeClass.class);
+        someClass.run();
     }
 }
